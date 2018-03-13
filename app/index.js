@@ -158,7 +158,8 @@ Generator.prototype.askForGulp = function askForGulp() {
     name: 'gulp',
     message: 'Would you like to use Gulp (experimental) instead of Grunt?',
     default: false
-  }], function (props) {
+  }]
+  , function (props) {
     this.gulp = props.gulp;
 
     cb();
@@ -234,7 +235,7 @@ Generator.prototype.askForModules = function askForModules() {
     }, {
       value: 'ariaModule',
       name: 'angular-aria.js',
-      checked: false
+      checked: true
     }, {
       value: 'cookiesModule',
       name: 'angular-cookies.js',
@@ -246,7 +247,7 @@ Generator.prototype.askForModules = function askForModules() {
     }, {
       value: 'messagesModule',
       name: 'angular-messages.js',
-      checked: false
+      checked: true
     }, {
       value: 'routeModule',
       name: 'angular-route.js',

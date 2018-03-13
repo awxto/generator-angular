@@ -12,7 +12,11 @@
     "angular-resource": "^<%= ngVer %>"<% } %><% if (routeModule) { %>,
     "angular-route": "^<%= ngVer %>"<% } %><% if (sanitizeModule) { %>,
     "angular-sanitize": "^<%= ngVer %>"<% } %><% if (touchModule) { %>,
-    "angular-touch": "^<%= ngVer %>"<% } %>
+    "angular-touch": "^<%= ngVer %>"<% } %>,
+    "font-awesome": "^4.0.8",
+    "outdated-browser": "^1.1.5",
+    "angular-gravatar": "^0.4.2",
+
   },
   "devDependencies": {
     "angular-mocks": "^<%= ngVer %>"
