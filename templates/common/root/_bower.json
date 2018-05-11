@@ -4,7 +4,7 @@
   "dependencies": {
     "angular": "^<%= ngVer %>"<% if (bootstrap) { %>,<% if (!compassBootstrap) { %>
     "bootstrap": "^3.2.0"<% } else { %>
-    "bootstrap-sass-official": "^3.2.0"<% } } %><% if (animateModule) { %>,
+    "bootstrap-sass": "^3.2.0"<% } } %><% if (animateModule) { %>,
     "angular-animate": "^<%= ngVer %>"<% } %><% if (ariaModule) { %>,
     "angular-aria": "^<%= ngVer %>"<% } %><% if (cookiesModule) { %>,
     "angular-cookies": "^<%= ngVer %>"<% } %><% if (messagesModule) { %>,
@@ -16,7 +16,8 @@
     "font-awesome": "^4.0.8",
     "outdated-browser": "^1.1.5",
     "angular-gravatar": "^0.4.2",
-
+    "ng-timeago": "^0.0.2",
+    "angular-loading-bar": "^0.9.0"
   },
   "devDependencies": {
     "angular-mocks": "^<%= ngVer %>"

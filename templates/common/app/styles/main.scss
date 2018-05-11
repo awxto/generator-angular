@@ -3,7 +3,7 @@
 @import "./helpers/variables.scss";
 @import "./helpers/functions.scss";
 
-<% if (compassBootstrap) { %>$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+<% if (compassBootstrap) { %>$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 <% } %>
 $fa-font-path: "../bower_components/font-awesome/fonts/";
 // bower:scss
