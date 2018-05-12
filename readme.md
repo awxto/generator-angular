@@ -1,9 +1,29 @@
-# AngularJS generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-angular.svg?branch=master)](http://travis-ci.org/yeoman/generator-angular) [![Gitter](https://img.shields.io/badge/Gitter-Join_the_Yeoman_chat_%E2%86%92-00d06f.svg)](https://gitter.im/yeoman/yeoman)
+# AngularJS generator
+travis: [![Build Status](https://travis-ci.org/awxto/generator-angular.svg?branch=master)](https://travis-ci.org/awxto/generator-angular)
+
+circleci:     [![CircleCI](https://circleci.com/gh/awxto/generator-angular.svg?style=svg)](https://circleci.com/gh/awxto/generator-angular)
 
 > Yeoman generator for AngularJS - lets you quickly set up a project with sensible defaults and best practices.
 
+## Note:
+ [bootstrap-sass](https://github.com/twbs/bootstrap-sass), [ui-bootstrap](https://github.com/angular-ui/bootstrap), [angular-bootstrap-material](https://github.com/tilwinjoy/angular-bootstrap-material), [font-awesome@5](https://fontawesome.com/) and some other cool improvements. (absolutely no jquery)
+
+> Tested on angular@1.6.9 with es5 (haven't tested typescript) We recommend switching to newer [angular](https://angular.io/) if you've learnt TypeScript.
+
+------------------------
+This generator is a successor of the all mighty [generator-angular](https://github.com/yeoman/generator-angular) which is archieved as of may 2018.
+We have replaced compass entirely which was super sluggish (took 2-3 minutes while on `grunt serve` and while `grunt build`! to compile a simple sass file). We replaced it with simple libsass. Thanks to this now the project compiles under 10 seconds tops.
+
+Also, we setup a diffent bower repo for going jquery free.
+See our struggle with bower.json and wiredep which won't take no for an answer.
+See jquery is 40 times slower than angularjs and other modern frameworks.
+
+We have completely removed gulp as it was not functional, and fixed the `grunt build` command which wasn't building the dist folder properly.
+
+-----------------------
+
 There are many starting points for building a new Angular single page app, in addition to this one. You can find
-other options in this list at 
+other options in this list at
 [Yeoman.io](http://yeoman.io/generators).
 
 [Roadmap for upcoming plans/features/fixes](https://github.com/yeoman/generator-angular/issues/553)
@@ -17,12 +37,6 @@ Install `yo`, `grunt-cli`, `bower`, `generator-angular` and `generator-karma`:
 npm install -g grunt-cli bower yo generator-karma generator-angular
 ```
 
-If you are planning on using Sass, you will need to first install Ruby and Compass:
-- Install Ruby by downloading from [here](http://rubyinstaller.org/downloads/) or use Homebrew
-- Install the compass gem:
-```
-gem install compass
-```
 
 Make a new directory, and `cd` into it:
 ```
@@ -224,7 +238,7 @@ module demoApp {
     export interface IUserScope extends ng.IScope {
         awesomeThings: any[];
     }
-    
+
     export class UserCtrl {
 
         constructor (private $scope:IUserScope) {
@@ -315,112 +329,12 @@ Running `grunt test` will run the unit tests with karma.
 
 See the [contributing docs](https://github.com/yeoman/yeoman/blob/master/contributing.md)
 
-When submitting an issue, please follow the [guidelines](https://github.com/yeoman/yeoman/blob/master/contributing.md#issue-submission). Especially important is to make sure Yeoman is up-to-date, and providing the command or commands that cause the issue.
-
-When submitting a PR, make sure that the commit messages match the [AngularJS conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/).
+When submitting an issue, please follow the [guidelines](https://github.com/awxto/generator-angular/blob/master/contributing.md#issue-submission). Especially important is to make sure Yeoman is up-to-date, and providing the command or commands that cause the issue.
 
 When submitting a bugfix, write a test that exposes the bug and fails before applying your fix. Submit the test alongside the fix.
 
 When submitting a new feature, add tests that cover the feature.
 
-## Changelog
-
-Recent changes can be viewed on Github on the [Releases Page](https://github.com/yeoman/generator-angular/releases)
-
-## Sponsors
-Love Yeoman work and community? Help us keep it alive by donating funds to cover project expenses! <br />
-[[Become a sponsor](https://opencollective.com/yeoman#support)]
-
-  <a href="https://opencollective.com/yeoman/backers/0/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/0/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/1/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/1/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/2/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/2/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/3/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/3/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/4/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/4/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/5/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/5/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/6/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/6/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/7/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/7/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/8/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/8/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/9/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/9/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/10/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/10/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/11/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/11/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/12/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/12/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/13/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/13/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/14/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/14/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/15/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/15/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/16/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/16/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/17/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/17/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/18/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/18/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/19/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/19/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/20/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/20/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/21/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/21/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/22/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/22/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/23/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/23/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/24/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/24/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/25/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/25/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/26/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/26/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/27/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/27/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/28/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/28/avatar">
-  </a>
-  <a href="https://opencollective.com/yeoman/backers/29/website" target="_blank">
-    <img src="https://opencollective.com/yeoman/backers/29/avatar">
-  </a>
 
 ## License
 
